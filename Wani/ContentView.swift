@@ -11,23 +11,44 @@ import CoreNFC
 struct ContentView: View {
     @State var data : [String] = []
     var body: some View {
-        VStack {
-            Text("DATA").font(.largeTitle).fontWeight(.bold).padding()
-            Spacer()
-            if (data.isEmpty){
-                Text("belum scan")
-            }else {
-                ForEach(data, id: \.self)
-                {
-                    x in Text(x)
+        VStack(alignment: .leading) {
+            HStack{
+                Spacer()
+                Image(systemName: "info.circle")
+                    .foregroundColor(Color("Primary"))
+            }
+            Text("Order")
+                .font(.largeTitle).fontWeight(.bold).padding()
+            VStack{
+                if (data.isEmpty){
+                    Spacer()
+                    Image("OrderEmpty")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.horizontal, 40)
+                        .padding(.vertical, 20)
+                    Text("Your Order is Empty.")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Text("Place iPhone over food picture\nto add items.")
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                        .padding(10)
+                    Spacer()
+                }else {
+                    List {
+                        ForEach(data, id: \.self)
+                        {
+                            x in Text(x)
+                        }
+                    }
+                    
                 }
-                
+                nfcButton(data: self.$data).frame(width: 200, height: 50)
             }
             Spacer()
-            nfcButton(data: self.$data).frame(width: 200, height: 50)
-            Spacer()
         }
-        .padding()
+        .padding(.horizontal, 20)
     }
 }
 
