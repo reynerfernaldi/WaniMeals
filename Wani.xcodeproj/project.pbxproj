@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2BE8052A808EEF00510F3C /* CardTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2BE8042A808EEF00510F3C /* CardTap.swift */; };
+		0B2BE8072A8090C300510F3C /* CardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2BE8062A8090C300510F3C /* CardMenu.swift */; };
 		6137399A2A78C321006991EB /* WaniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613739992A78C321006991EB /* WaniApp.swift */; };
 		6137399C2A78C321006991EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137399B2A78C321006991EB /* ContentView.swift */; };
 		6137399E2A78C321006991EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6137399D2A78C321006991EB /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2BE8042A808EEF00510F3C /* CardTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTap.swift; sourceTree = "<group>"; };
+		0B2BE8062A8090C300510F3C /* CardMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenu.swift; sourceTree = "<group>"; };
 		613739962A78C320006991EB /* Wani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		613739992A78C321006991EB /* WaniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniApp.swift; sourceTree = "<group>"; };
 		6137399B2A78C321006991EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				E2E65E3C2A80870700ACFFC4 /* EmptyState.swift */,
+				0B2BE8042A808EEF00510F3C /* CardTap.swift */,
+				0B2BE8062A8090C300510F3C /* CardMenu.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -158,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2BE8072A8090C300510F3C /* CardMenu.swift in Sources */,
 				E2E65E3D2A80870700ACFFC4 /* EmptyState.swift in Sources */,
 				6137399C2A78C321006991EB /* ContentView.swift in Sources */,
+				0B2BE8052A808EEF00510F3C /* CardTap.swift in Sources */,
 				6137399A2A78C321006991EB /* WaniApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
