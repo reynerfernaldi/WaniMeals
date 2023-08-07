@@ -21,8 +21,10 @@ struct CardMenu: View {
                 VStack(alignment: .leading){
                     Text("Nasi Ayam Geprek")
                         .fontWeight(.bold)
+                        .padding(.vertical, 1)
                     Text("Rp12.000")
                         .fontWeight(.regular)
+                        .foregroundColor(Color("Secondary"))
                     HStack{
                         Text("Quantity")
                             .font(.body)
@@ -40,7 +42,7 @@ struct CardMenu: View {
                         .background(Color(red: 0.46, green: 0.46, blue: 0.5).opacity(0.12))
                         .cornerRadius(8)
                     }
-                }
+                }.padding(.horizontal, 5)
             }.padding(10)
         }
     }

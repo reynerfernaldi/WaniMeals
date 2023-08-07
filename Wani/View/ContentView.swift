@@ -13,29 +13,12 @@ struct ContentView: View {
     var body: some View {
         NavigationStack
         {
-            VStack(alignment: .leading) {
-                CardTap()
-                VStack{
-                    if (data.isEmpty){
-                        //                        EmptyState()
-                        CardMenu()
-                    }else {
-                        List {
-                            ForEach(data, id: \.self)
-                            {
-                                x in Text(x)
-                            }
-                        }
-                        
-                    }
-                    nfcButton(data: self.$data).frame(width: 200, height: 50)
-                }
-                Spacer()
+            if (data.isEmpty){
+                EmptyState()
+//                OrderState()
+            } else {
+                OrderState()
             }
-            .padding(.horizontal, 20)
-            .background(Color("ColorBackground"))
-            .navigationTitle("Order")
-            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
