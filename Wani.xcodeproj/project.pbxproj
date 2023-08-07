@@ -35,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		612F4BAE2A8089980025E5A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2E65E392A8086A500ACFFC4 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6137398D2A78C320006991EB = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +62,7 @@
 		613739982A78C320006991EB /* Wani */ = {
 			isa = PBXGroup;
 			children = (
-				E2E65E392A8086A500ACFFC4 /* Components */,
+				612F4BAE2A8089980025E5A0 /* View */,
 				E25008172A78D9B60037DFC5 /* Wani.entitlements */,
 				613739992A78C321006991EB /* WaniApp.swift */,
 				6137399B2A78C321006991EB /* ContentView.swift */,
