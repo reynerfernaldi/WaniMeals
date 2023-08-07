@@ -14,9 +14,11 @@ struct ContentView: View {
         NavigationStack
         {
             VStack(alignment: .leading) {
+                CardTap()
                 VStack{
                     if (data.isEmpty){
-                        EmptyState()
+//                        EmptyState()
+                        CardMenu()
                     }else {
                         List {
                             ForEach(data, id: \.self)
@@ -30,11 +32,11 @@ struct ContentView: View {
                 }
                 Spacer()
             }
+            .padding(.horizontal, 20)
+            .background(Color("ColorBackground"))
             .navigationTitle("Order")
             .navigationBarTitleDisplayMode(.large)
         }
-        
-        .padding(.horizontal, 20)
     }
 }
 
