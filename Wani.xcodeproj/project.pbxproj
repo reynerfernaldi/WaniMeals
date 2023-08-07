@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		612F4BB02A808A980025E5A0 /* KitchenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F4BAF2A808A980025E5A0 /* KitchenView.swift */; };
+		612F4BB42A808B140025E5A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F4BB32A808B140025E5A0 /* LoginView.swift */; };
 		6137399A2A78C321006991EB /* WaniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613739992A78C321006991EB /* WaniApp.swift */; };
 		6137399C2A78C321006991EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137399B2A78C321006991EB /* ContentView.swift */; };
 		6137399E2A78C321006991EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6137399D2A78C321006991EB /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		612F4BAF2A808A980025E5A0 /* KitchenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenView.swift; sourceTree = "<group>"; };
+		612F4BB32A808B140025E5A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		613739962A78C320006991EB /* Wani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		613739992A78C321006991EB /* WaniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniApp.swift; sourceTree = "<group>"; };
 		6137399B2A78C321006991EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 			children = (
 				6137399B2A78C321006991EB /* ContentView.swift */,
 				E2E65E392A8086A500ACFFC4 /* Components */,
+				612F4BAF2A808A980025E5A0 /* KitchenView.swift */,
+				612F4BB32A808B140025E5A0 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E65E3D2A80870700ACFFC4 /* EmptyState.swift in Sources */,
+				612F4BB02A808A980025E5A0 /* KitchenView.swift in Sources */,
 				6137399C2A78C321006991EB /* ContentView.swift in Sources */,
+				612F4BB42A808B140025E5A0 /* LoginView.swift in Sources */,
 				6137399A2A78C321006991EB /* WaniApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
