@@ -42,7 +42,7 @@ struct CardMenu: View {
                         .background(Color(red: 0.46, green: 0.46, blue: 0.5).opacity(0.12))
                         .cornerRadius(8)
                     }
-                }.padding(.horizontal, 5)
+                }.padding(.vertical, 5)
             }.padding(10)
         }
     }

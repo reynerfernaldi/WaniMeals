@@ -14,8 +14,8 @@ struct ContentView: View {
         NavigationStack
         {
             if (data.isEmpty){
-                EmptyState()
-//                OrderState()
+//                EmptyState()
+                OrderState()
             } else {
                 OrderState()
             }

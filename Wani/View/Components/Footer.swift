@@ -14,34 +14,35 @@ struct Footer: View {
                 Text("Total")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 Spacer()
                 Text("Rp42.000")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }.padding(.top, 10)
-            Text("Add more by tapping the top of your iPhone over food picture")
-                .font(.caption2)
-                .foregroundColor(Color("SecondaryDark"))
-                .padding(.vertical, 1)
+//            Text("Add more by tapping the top of your iPhone over food picture")
+//                .font(.caption2)
+//                .foregroundColor(Color("SecondaryDark"))
+//                .padding(.vertical, 1)
             Button {
                 
             } label: {
                 ZStack{
                     Rectangle()
                         .frame(width: .infinity, height: 50)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("Primary"))
                         .cornerRadius(15)
                     Text("Place Order")
                         .font(.system(size: 16, weight: .bold, design: .default))
-                        .foregroundColor(Color("Primary"))
+                        .foregroundColor(.white)
                 }
             }
         }
         .padding(.horizontal, 30)
         .padding(.vertical, 10)
-        .background(Color("Primary"))
+        .background(Color("ColorBackground"))
+//        .background(Color("Primary"))
     }
 }
 
