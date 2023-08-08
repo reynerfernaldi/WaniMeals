@@ -15,10 +15,7 @@ struct OrderState: View {
                 VStack
                 {
                     CardMenu()
-                    Text("Add more by tapping the top of your iPhone over food picture")
-                        .font(.caption2)
-                        .foregroundColor(Color("Secondary"))
-                        .padding(5)
+//                    
                 }
 //                nfcButton(data: self.$data).frame(width: 200, height: 50)
             }

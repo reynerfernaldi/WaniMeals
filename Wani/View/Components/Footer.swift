@@ -20,11 +20,12 @@ struct Footer: View {
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
-            }.padding(.top, 10)
-//            Text("Add more by tapping the top of your iPhone over food picture")
-//                .font(.caption2)
-//                .foregroundColor(Color("SecondaryDark"))
-//                .padding(.vertical, 1)
+            }.padding(.top, 11)
+            Text("Add more by tapping the top of your iPhone over food picture")
+                .font(.caption2)
+                .foregroundColor(Color("Secondary"))
+                .padding(.bottom, 11)
+                .padding(.top, 6)
             Button {
                 
             } label: {
@@ -39,7 +40,7 @@ struct Footer: View {
                 }
             }
         }
-        .padding(.horizontal, 30)
+        .padding(.horizontal, 33)
         .padding(.vertical, 10)
         .background(Color("ColorBackground"))
 //        .background(Color("Primary"))
