@@ -21,11 +21,11 @@ struct Footer: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
             }.padding(.top, 11)
-            Text("Add more by tapping the top of your iPhone over food picture")
-                .font(.caption2)
-                .foregroundColor(Color("Secondary"))
-                .padding(.bottom, 11)
-                .padding(.top, 6)
+//            Text("Add more by tapping the top of your iPhone over food picture")
+//                .font(.caption2)
+//                .foregroundColor(Color("Secondary"))
+//                .padding(.bottom, 11)
+//                .padding(.top, 6)
             Button {
                 
             } label: {

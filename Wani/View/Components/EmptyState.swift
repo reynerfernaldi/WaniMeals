@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmptyState: View {
+    @Binding var data : [String]
     var body: some View {
         VStack(alignment: .leading) {
             //                CardTap()
@@ -40,11 +41,14 @@ struct EmptyState: View {
         .background(Color("ColorBackground"))
         .navigationTitle("Order")
         .navigationBarTitleDisplayMode(.large)
+        .toolbar{
+            nfcButton(data: self.$data).frame(width: 50, height: 50)
+        }
     }
 }
 
-struct EmptyState_Previews: PreviewProvider {
-    static var previews: some View {
-        EmptyState()
-    }
-}
+//struct EmptyState_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EmptyState(data: $data)
+//    }
+//}

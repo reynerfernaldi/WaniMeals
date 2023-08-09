@@ -1,25 +1,21 @@
 //
-//  OrderState.swift
+//  Listnumpang.swift
 //  Wani
 //
-//  Created by Aiffah Kiysa Waafi on 07/08/23.
+//  Created by Vania on 09/08/23.
 //
 
 import SwiftUI
-import CoreNFC
 
-struct OrderState: View {
+struct Listnumpang: View {
     @Binding var data : [String]
     var body: some View {
-        VStack(alignment: .leading) {
-            //                CardTap()
-            VStack{
-                VStack
+        VStack {
+            List {
+                ForEach(data, id: \.self)
                 {
-                    CardMenu()
-//                    
+                    x in Text(x)
                 }
-//
             }
             Spacer()
         }
@@ -34,9 +30,8 @@ struct OrderState: View {
     }
 }
 
-//struct OrderState_Previews: PreviewProvider {
+//struct Listnumpang_Previews: PreviewProvider {
 //    static var previews: some View {
-//        OrderState(data: $data)
+//        Listnumpang()
 //    }
 //}
-
