@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B2E64A12A83D06400B4A843 /* WaniAppClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64A02A83D06400B4A843 /* WaniAppClipApp.swift */; };
-		0B2E64A32A83D06400B4A843 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64A22A83D06400B4A843 /* ContentView.swift */; };
-		0B2E64A52A83D06700B4A843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2E64A42A83D06700B4A843 /* Assets.xcassets */; };
-		0B2E64A82A83D06700B4A843 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2E64A72A83D06700B4A843 /* Preview Assets.xcassets */; };
-		0B2E64AD2A83D06700B4A843 /* WaniAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0B2E649E2A83D06400B4A843 /* WaniAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B2E64B32A83D07F00B4A843 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64B22A83D07F00B4A843 /* CommonView.swift */; };
-		0B2E64B42A83D0B700B4A843 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64B22A83D07F00B4A843 /* CommonView.swift */; };
-		0B2E64B52A83D0D400B4A843 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E65E3C2A80870700ACFFC4 /* EmptyState.swift */; };
-		0B2E64B62A83D0DD00B4A843 /* Listnumpang.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E332A83477700F0CE95 /* Listnumpang.swift */; };
-		0B2E64B72A83D13600B4A843 /* nfcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E312A8345F600F0CE95 /* nfcButton.swift */; };
-		0B2E64B82A83D13F00B4A843 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340762A814BC90073EB70 /* Footer.swift */; };
+		0B2E64BC2A847C2A00B4A843 /* nfcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E312A8345F600F0CE95 /* nfcButton.swift */; };
+		0B2E64C52A847D4800B4A843 /* WaniAppClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64C42A847D4800B4A843 /* WaniAppClipApp.swift */; };
+		0B2E64C72A847D4800B4A843 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64C62A847D4800B4A843 /* ContentView.swift */; };
+		0B2E64C92A847D4900B4A843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2E64C82A847D4900B4A843 /* Assets.xcassets */; };
+		0B2E64CC2A847D4900B4A843 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2E64CB2A847D4900B4A843 /* Preview Assets.xcassets */; };
+		0B2E64D12A847D4900B4A843 /* WaniAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0B2E64C22A847D4800B4A843 /* WaniAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0B8F69422A8483D300188DA6 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64B22A83D07F00B4A843 /* CommonView.swift */; };
+		0B8F69432A8483D600188DA6 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E65E3C2A80870700ACFFC4 /* EmptyState.swift */; };
+		0B8F69442A8483DC00188DA6 /* CardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340722A80A7340073EB70 /* CardMenu.swift */; };
+		0B8F69452A8483DF00188DA6 /* nfcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E312A8345F600F0CE95 /* nfcButton.swift */; };
+		0B8F69462A8483E100188DA6 /* OrderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340742A814B0F0073EB70 /* OrderState.swift */; };
+		0B8F69472A8483E400188DA6 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340762A814BC90073EB70 /* Footer.swift */; };
+		0B8F69482A8483E600188DA6 /* Listnumpang.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E332A83477700F0CE95 /* Listnumpang.swift */; };
 		0BC340712A80A6D30073EB70 /* CardTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340702A80A6D30073EB70 /* CardTap.swift */; };
 		0BC340732A80A7340073EB70 /* CardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340722A80A7340073EB70 /* CardMenu.swift */; };
 		0BC340752A814B0F0073EB70 /* OrderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340742A814B0F0073EB70 /* OrderState.swift */; };
@@ -34,11 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B2E64AB2A83D06700B4A843 /* PBXContainerItemProxy */ = {
+		0B2E64CF2A847D4900B4A843 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6137398E2A78C320006991EB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0B2E649D2A83D06400B4A843;
+			remoteGlobalIDString = 0B2E64C12A847D4800B4A843;
 			remoteInfo = WaniAppClip;
 		};
 /* End PBXContainerItemProxy section */
@@ -50,7 +53,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
-				0B2E64AD2A83D06700B4A843 /* WaniAppClip.app in Embed App Clips */,
+				0B2E64D12A847D4900B4A843 /* WaniAppClip.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,14 +61,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B2E649E2A83D06400B4A843 /* WaniAppClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniAppClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B2E64A02A83D06400B4A843 /* WaniAppClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniAppClipApp.swift; sourceTree = "<group>"; };
-		0B2E64A22A83D06400B4A843 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0B2E64A42A83D06700B4A843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B2E64A72A83D06700B4A843 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0B2E64A92A83D06700B4A843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B2E64AA2A83D06700B4A843 /* WaniAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaniAppClip.entitlements; sourceTree = "<group>"; };
 		0B2E64B22A83D07F00B4A843 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
+		0B2E64C22A847D4800B4A843 /* WaniAppClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaniAppClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B2E64C42A847D4800B4A843 /* WaniAppClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaniAppClipApp.swift; sourceTree = "<group>"; };
+		0B2E64C62A847D4800B4A843 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0B2E64C82A847D4900B4A843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B2E64CB2A847D4900B4A843 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0B2E64CD2A847D4900B4A843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2E64CE2A847D4900B4A843 /* WaniAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaniAppClip.entitlements; sourceTree = "<group>"; };
 		0BC340702A80A6D30073EB70 /* CardTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTap.swift; sourceTree = "<group>"; };
 		0BC340722A80A7340073EB70 /* CardMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenu.swift; sourceTree = "<group>"; };
 		0BC340742A814B0F0073EB70 /* OrderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderState.swift; sourceTree = "<group>"; };
@@ -85,7 +88,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B2E649B2A83D06400B4A843 /* Frameworks */ = {
+		0B2E64BF2A847D4800B4A843 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,23 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B2E649F2A83D06400B4A843 /* WaniAppClip */ = {
+		0B2E64C32A847D4800B4A843 /* WaniAppClip */ = {
 			isa = PBXGroup;
 			children = (
-				0B2E64A02A83D06400B4A843 /* WaniAppClipApp.swift */,
-				0B2E64A22A83D06400B4A843 /* ContentView.swift */,
-				0B2E64A42A83D06700B4A843 /* Assets.xcassets */,
-				0B2E64A92A83D06700B4A843 /* Info.plist */,
-				0B2E64AA2A83D06700B4A843 /* WaniAppClip.entitlements */,
-				0B2E64A62A83D06700B4A843 /* Preview Content */,
+				0B2E64C42A847D4800B4A843 /* WaniAppClipApp.swift */,
+				0B2E64C62A847D4800B4A843 /* ContentView.swift */,
+				0B2E64C82A847D4900B4A843 /* Assets.xcassets */,
+				0B2E64CD2A847D4900B4A843 /* Info.plist */,
+				0B2E64CE2A847D4900B4A843 /* WaniAppClip.entitlements */,
+				0B2E64CA2A847D4900B4A843 /* Preview Content */,
 			);
 			path = WaniAppClip;
 			sourceTree = "<group>";
 		};
-		0B2E64A62A83D06700B4A843 /* Preview Content */ = {
+		0B2E64CA2A847D4900B4A843 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				0B2E64A72A83D06700B4A843 /* Preview Assets.xcassets */,
+				0B2E64CB2A847D4900B4A843 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -140,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				613739982A78C320006991EB /* Wani */,
-				0B2E649F2A83D06400B4A843 /* WaniAppClip */,
+				0B2E64C32A847D4800B4A843 /* WaniAppClip */,
 				613739972A78C320006991EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				613739962A78C320006991EB /* Wani.app */,
-				0B2E649E2A83D06400B4A843 /* WaniAppClip.app */,
+				0B2E64C22A847D4800B4A843 /* WaniAppClip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,13 +210,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B2E649D2A83D06400B4A843 /* WaniAppClip */ = {
+		0B2E64C12A847D4800B4A843 /* WaniAppClip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B2E64AE2A83D06700B4A843 /* Build configuration list for PBXNativeTarget "WaniAppClip" */;
+			buildConfigurationList = 0B2E64D22A847D4900B4A843 /* Build configuration list for PBXNativeTarget "WaniAppClip" */;
 			buildPhases = (
-				0B2E649A2A83D06400B4A843 /* Sources */,
-				0B2E649B2A83D06400B4A843 /* Frameworks */,
-				0B2E649C2A83D06400B4A843 /* Resources */,
+				0B2E64BE2A847D4800B4A843 /* Sources */,
+				0B2E64BF2A847D4800B4A843 /* Frameworks */,
+				0B2E64C02A847D4800B4A843 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -221,7 +224,7 @@
 			);
 			name = WaniAppClip;
 			productName = WaniAppClip;
-			productReference = 0B2E649E2A83D06400B4A843 /* WaniAppClip.app */;
+			productReference = 0B2E64C22A847D4800B4A843 /* WaniAppClip.app */;
 			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 		613739952A78C320006991EB /* Wani */ = {
@@ -236,7 +239,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				0B2E64AC2A83D06700B4A843 /* PBXTargetDependency */,
+				0B2E64D02A847D4900B4A843 /* PBXTargetDependency */,
 			);
 			name = Wani;
 			productName = Wani;
@@ -253,7 +256,7 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					0B2E649D2A83D06400B4A843 = {
+					0B2E64C12A847D4800B4A843 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					613739952A78C320006991EB = {
@@ -275,18 +278,18 @@
 			projectRoot = "";
 			targets = (
 				613739952A78C320006991EB /* Wani */,
-				0B2E649D2A83D06400B4A843 /* WaniAppClip */,
+				0B2E64C12A847D4800B4A843 /* WaniAppClip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0B2E649C2A83D06400B4A843 /* Resources */ = {
+		0B2E64C02A847D4800B4A843 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B2E64A82A83D06700B4A843 /* Preview Assets.xcassets in Resources */,
-				0B2E64A52A83D06700B4A843 /* Assets.xcassets in Resources */,
+				0B2E64CC2A847D4900B4A843 /* Preview Assets.xcassets in Resources */,
+				0B2E64C92A847D4900B4A843 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,17 +305,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B2E649A2A83D06400B4A843 /* Sources */ = {
+		0B2E64BE2A847D4800B4A843 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B2E64A32A83D06400B4A843 /* ContentView.swift in Sources */,
-				0B2E64B72A83D13600B4A843 /* nfcButton.swift in Sources */,
-				0B2E64A12A83D06400B4A843 /* WaniAppClipApp.swift in Sources */,
-				0B2E64B42A83D0B700B4A843 /* CommonView.swift in Sources */,
-				0B2E64B82A83D13F00B4A843 /* Footer.swift in Sources */,
-				0B2E64B62A83D0DD00B4A843 /* Listnumpang.swift in Sources */,
-				0B2E64B52A83D0D400B4A843 /* EmptyState.swift in Sources */,
+				0B8F69442A8483DC00188DA6 /* CardMenu.swift in Sources */,
+				0B8F69452A8483DF00188DA6 /* nfcButton.swift in Sources */,
+				0B8F69462A8483E100188DA6 /* OrderState.swift in Sources */,
+				0B8F69482A8483E600188DA6 /* Listnumpang.swift in Sources */,
+				0B2E64C72A847D4800B4A843 /* ContentView.swift in Sources */,
+				0B2E64C52A847D4800B4A843 /* WaniAppClipApp.swift in Sources */,
+				0B8F69422A8483D300188DA6 /* CommonView.swift in Sources */,
+				0B8F69472A8483E400188DA6 /* Footer.swift in Sources */,
+				0B8F69432A8483D600188DA6 /* EmptyState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +330,7 @@
 				612F4BB02A808A980025E5A0 /* KitchenView.swift in Sources */,
 				61BF6E2B2A809ADD00F88013 /* KitchenModel.swift in Sources */,
 				0BC340772A814BC90073EB70 /* Footer.swift in Sources */,
+				0B2E64BC2A847C2A00B4A843 /* nfcButton.swift in Sources */,
 				0BC340712A80A6D30073EB70 /* CardTap.swift in Sources */,
 				E2CC6E342A83477700F0CE95 /* Listnumpang.swift in Sources */,
 				6137399C2A78C321006991EB /* ContentView.swift in Sources */,
@@ -338,15 +344,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B2E64AC2A83D06700B4A843 /* PBXTargetDependency */ = {
+		0B2E64D02A847D4900B4A843 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0B2E649D2A83D06400B4A843 /* WaniAppClip */;
-			targetProxy = 0B2E64AB2A83D06700B4A843 /* PBXContainerItemProxy */;
+			target = 0B2E64C12A847D4800B4A843 /* WaniAppClip */;
+			targetProxy = 0B2E64CF2A847D4900B4A843 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0B2E64AF2A83D06700B4A843 /* Debug */ = {
+		0B2E64D32A847D4900B4A843 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -361,6 +367,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaniAppClip/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wani;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Test Dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -379,7 +386,7 @@
 			};
 			name = Debug;
 		};
-		0B2E64B02A83D06700B4A843 /* Release */ = {
+		0B2E64D42A847D4900B4A843 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -394,6 +401,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaniAppClip/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wani;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Test Dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -597,11 +605,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B2E64AE2A83D06700B4A843 /* Build configuration list for PBXNativeTarget "WaniAppClip" */ = {
+		0B2E64D22A847D4900B4A843 /* Build configuration list for PBXNativeTarget "WaniAppClip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B2E64AF2A83D06700B4A843 /* Debug */,
-				0B2E64B02A83D06700B4A843 /* Release */,
+				0B2E64D32A847D4900B4A843 /* Debug */,
+				0B2E64D42A847D4900B4A843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
