@@ -9,17 +9,18 @@ import SwiftUI
 import CoreNFC
 
 struct ContentView: View {
-    @State var data : [String] = []
+//    @State var data : [String] = []
     var body: some View {
-        NavigationStack
-        {
-            if (data.isEmpty){
-                EmptyState(data: $data)
-            } else {
-                //OrderState(data: $data)
-                Listnumpang(data: $data)
-            }
-        }
+        CommonView()
+//        NavigationStack
+//        {
+//            if (data.isEmpty){
+//                EmptyState(data: $data)
+//            } else {
+//                //OrderState(data: $data)
+//                Listnumpang(data: $data)
+//            }
+//        }
     }
 }
 
