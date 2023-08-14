@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardMenu: View {
+    let food: Food
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
@@ -19,14 +20,14 @@ struct CardMenu: View {
                     .resizable()
                     .frame(width: 90, height: 90)
                 VStack(alignment: .leading){
-                    Text("Nasi Ayam Geprek")
+                    Text(food.name)
                         .fontWeight(.bold)
                         .padding(.vertical, 1)
-                    Text("Rp12.000")
+                    Text("Rp" + String(food.price))
                         .fontWeight(.regular)
                         .foregroundColor(Color("Secondary"))
                     HStack{
-                        Text("Quantity")
+                        Text("Quantity = 1")
                             .font(.body)
                             .fontWeight(.regular)
                             .padding(.vertical, 10)
@@ -50,6 +51,6 @@ struct CardMenu: View {
 
 struct CardMenu_Previews: PreviewProvider {
     static var previews: some View {
-        CardMenu()
+        CardMenu(food: Food(name: "lorem", price: 20, picture: "x"))
     }
 }

@@ -15,8 +15,8 @@ struct CommonView: View {
             if (data.isEmpty){
                 EmptyState(data: $data)
             } else {
-                //OrderState(data: $data)
-                Listnumpang(data: $data)
+                OrderState(data: $data)
+//                Listnumpang(data: $data)
             }
         }
     }
