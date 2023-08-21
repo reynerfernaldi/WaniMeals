@@ -44,6 +44,7 @@
 		6137399E2A78C321006991EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6137399D2A78C321006991EB /* Assets.xcassets */; };
 		613739A12A78C321006991EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 613739A02A78C321006991EB /* Preview Assets.xcassets */; };
 		61BF6E2B2A809ADD00F88013 /* KitchenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF6E2A2A809ADD00F88013 /* KitchenModel.swift */; };
+		E2A62B142A92FDBE000EC0F3 /* ItemOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A62B132A92FDBE000EC0F3 /* ItemOrder.swift */; };
 		E2CC6E342A83477700F0CE95 /* Listnumpang.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E332A83477700F0CE95 /* Listnumpang.swift */; };
 		E2CC6E362A84984200F0CE95 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E352A84984200F0CE95 /* Food.swift */; };
 		E2E65E3D2A80870700ACFFC4 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E65E3C2A80870700ACFFC4 /* EmptyState.swift */; };
@@ -100,6 +101,7 @@
 		613739A02A78C321006991EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61BF6E2A2A809ADD00F88013 /* KitchenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenModel.swift; sourceTree = "<group>"; };
 		E25008172A78D9B60037DFC5 /* Wani.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wani.entitlements; sourceTree = "<group>"; };
+		E2A62B132A92FDBE000EC0F3 /* ItemOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOrder.swift; sourceTree = "<group>"; };
 		E2CC6E312A8345F600F0CE95 /* nfcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nfcButton.swift; sourceTree = "<group>"; };
 		E2CC6E332A83477700F0CE95 /* Listnumpang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listnumpang.swift; sourceTree = "<group>"; };
 		E2CC6E352A84984200F0CE95 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				0BC340722A80A7340073EB70 /* CardMenu.swift */,
 				E2CC6E312A8345F600F0CE95 /* nfcButton.swift */,
 				0BC340742A814B0F0073EB70 /* OrderState.swift */,
+				E2A62B132A92FDBE000EC0F3 /* ItemOrder.swift */,
 				0BC340762A814BC90073EB70 /* Footer.swift */,
 				E2CC6E332A83477700F0CE95 /* Listnumpang.swift */,
 			);
@@ -363,6 +366,7 @@
 				E2E65E3D2A80870700ACFFC4 /* EmptyState.swift in Sources */,
 				612F4BB02A808A980025E5A0 /* KitchenView.swift in Sources */,
 				61BF6E2B2A809ADD00F88013 /* KitchenModel.swift in Sources */,
+				E2A62B142A92FDBE000EC0F3 /* ItemOrder.swift in Sources */,
 				0BC340772A814BC90073EB70 /* Footer.swift in Sources */,
 				0B2E64BC2A847C2A00B4A843 /* nfcButton.swift in Sources */,
 				0BC340712A80A6D30073EB70 /* CardTap.swift in Sources */,

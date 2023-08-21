@@ -13,7 +13,7 @@ struct nfcButton : UIViewRepresentable{
         
     }
     
-    @Binding var data : [String]
+    @Binding var data : [ItemOrder]
     func makeUIView(context: Context) -> UIButton {
         let button = UIButton()
         //button.backgroundColor = UIColor(named: "Primary")
@@ -32,9 +32,9 @@ struct nfcButton : UIViewRepresentable{
     
     class Coordinator : NSObject, NFCNDEFReaderSessionDelegate {
         var session : NFCNDEFReaderSession?
-        @Binding var data : [String]
+        @Binding var data : [ItemOrder]
         
-        init(data: Binding<[String]>)
+        init(data: Binding<[ItemOrder]>)
         {
             _data = data
         }
@@ -70,7 +70,17 @@ struct nfcButton : UIViewRepresentable{
                         continue
                     }
                     print(payload)
-                    self.data.append(payload)
+                    let modifiedString = String(payload.suffix(from: payload.index(payload.startIndex, offsetBy: 3)))
+                    if let indexAda = data.firstIndex(where: {$0.name == modifiedString}){
+                        data[indexAda].qty += 1
+                    }
+                    else if let orderedFood = foodList.first(where: {$0.name == modifiedString}){
+                        data.append(ItemOrder(name: orderedFood.name, price: orderedFood.price, qty: 1))
+                    }
+                    for x in data {
+                        let itemString = x.name + " " + String(x.price) + " " + String(x.qty)
+                        print(itemString)
+                    }
                 }
             }
         }

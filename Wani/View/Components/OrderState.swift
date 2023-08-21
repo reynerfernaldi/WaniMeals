@@ -10,17 +10,15 @@ import Swift
 import CoreNFC
 
 struct OrderState: View {
-    @Binding var data : [String]
+    @Binding var data : [ItemOrder]
     var body: some View {
         VStack(alignment: .leading) {
             VStack{
-                ForEach(data, id: \.self){x in
-                    let index = x.index(x.startIndex, offsetBy: 3)
-                    let modifiedString = String(x[index...])
-                    let y = foodList.first(where: { $0.name == modifiedString })
-                    CardMenu(food: y!)
-                    
-                }
+                ForEach(data, id: \.self) { x in
+                    if let y = foodList.first(where: { $0.name == x.name }) {
+                        CardMenu(food: y, qty: x.qty)
+                        }
+                    }
             }
             Spacer()
         }
@@ -31,14 +29,14 @@ struct OrderState: View {
                 .toolbar{
                     nfcButton(data: self.$data).frame(width: 50, height: 50)
                 }
-        Footer()
+        Footer(data: $data)
     }
 }
 
-struct OrderState_Previews: PreviewProvider {
-    static var previews: some View {
-        //        let binding = Binding<[String]>(get: { ["Bakso"] }, set: { _ in })
-        OrderState(data: .constant(["Bakso"]))
-    }
-}
+//struct OrderState_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //        let binding = Binding<[String]>(get: { ["Bakso"] }, set: { _ in })
+////        OrderState(data: .constant(["Bakso"]))
+//    }
+//}
 

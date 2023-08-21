@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct Listnumpang: View {
-    @Binding var data : [String]
+    @Binding var data : [ItemOrder]
     var body: some View {
         VStack {
             List {
                 ForEach(data, id: \.self)
                 {
-                    x in Text(x)
+                    x in Text(x.name)
                 }
             }
             Spacer()
@@ -26,7 +26,7 @@ struct Listnumpang: View {
         .toolbar{
             nfcButton(data: self.$data).frame(width: 50, height: 50)
         }
-        Footer()
+        Footer(data: $data)
     }
 }
 
