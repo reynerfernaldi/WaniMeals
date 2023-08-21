@@ -6,38 +6,18 @@
 //
 
 import SwiftUI
-import Swift
 import CoreNFC
 
 struct OrderState: View {
-    @EnvironmentObject var rpsSession: RPSMultipeerSession
-    @Binding var data : [Orders]
+    @Binding var data : [ItemOrder]
     var body: some View {
         VStack(alignment: .leading) {
             VStack{
-//                ForEach(data, id: \.self) { x in
-//                    if let y = foodList.first(where: { $0.name == x.name }) {
-//                        CardMenu(food: y, qty: x.qty)
-//                    }
-//                }
-                ForEach(rpsSession.orders
-                    .filter { $0.username == rpsSession.username }
-                        , id: \.id) { order in
-                    VStack(alignment: .leading){
-                        Text("ID: \(order.username)")
-                        Text("Status: \(order.isReady)" as String)
-                        
-                        ForEach(order.menus, id: \.id) { i in
-//                            HStack{
-//                                Text("Menu: \(i.name)")
-//                                Text("Qty: \(i.qty)")
-//                            }
-                            if let y = foodList.first(where: { $0.name == i.name }) {
-                                CardMenu(food: y, qty: i.qty)
-                            }
+                ForEach(data, id: \.self) { x in
+                    if let y = foodList.first(where: { $0.name == x.name }) {
+                        CardMenu(food: y, qty: x.qty)
                         }
                     }
-                }
             }
             Spacer()
         }
@@ -45,11 +25,12 @@ struct OrderState: View {
         .background(Color("ColorBackground"))
         .navigationTitle("Order")
         .navigationBarTitleDisplayMode(.large)
-        .toolbar{
-            nfcButton(data: self.$data).frame(width: 50, height: 50)
-        }
+                .toolbar{
+                    nfcButton(data: self.$data).frame(width: 50, height: 50)
+                }
         Footer(data: $data)
     }
+    
 }
 
 //struct OrderState_Previews: PreviewProvider {

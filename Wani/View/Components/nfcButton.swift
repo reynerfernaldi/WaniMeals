@@ -13,7 +13,7 @@ struct nfcButton : UIViewRepresentable{
         
     }
     
-    @Binding var data : [Orders]
+    @Binding var data : [ItemOrder]
     func makeUIView(context: Context) -> UIButton {
         let button = UIButton()
         //button.backgroundColor = UIColor(named: "Primary")
@@ -33,9 +33,9 @@ struct nfcButton : UIViewRepresentable{
     class Coordinator : NSObject, NFCNDEFReaderSessionDelegate {
         @EnvironmentObject var rpsSession: RPSMultipeerSession
         var session : NFCNDEFReaderSession?
-        @Binding var data : [Orders]
+        @Binding var data : [ItemOrder]
         
-        init(data: Binding<[Orders]>)
+        init(data: Binding<[ItemOrder]>)
         {
             _data = data
         }
@@ -73,43 +73,36 @@ struct nfcButton : UIViewRepresentable{
                     print(payload)
                     let modifiedString = String(payload.suffix(from: payload.index(payload.startIndex, offsetBy: 3)))
                     //                    if let orderIndex = data.firstIndex(where: { $0.menus.contains { $0.name == modifiedString } }) {
-                    //                        let order = data[orderIndex]
-                    //                        if let itemIndex = order.menus.firstIndex(where: { $0.name == modifiedString }) {
+                    //                        if let itemIndex = data[orderIndex].menus.firstIndex(where: { $0.name == modifiedString }) {
+                    //                            let order = data[orderIndex]
+                    //                            let item = order.menus[itemIndex]
+                    //
+                    //                            var modifiedItem = item
+                    //                            modifiedItem.qty += 1
+                    //
+                    //                            var modifiedOrders = data
+                    //                            modifiedOrders[orderIndex].menus[itemIndex] = modifiedItem
                     //
                     //                        }
                     //                    }
-                    if let orderIndex = data.firstIndex(where: { $0.menus.contains { $0.name == modifiedString } }) {
-                        if let itemIndex = data[orderIndex].menus.firstIndex(where: { $0.name == modifiedString }) {
-                            let order = data[orderIndex]
-                            let item = order.menus[itemIndex]
-                            
-                            var modifiedItem = item
-                            modifiedItem.qty += 1
-                            
-                            var modifiedOrders = data
-                            modifiedOrders[orderIndex].menus[itemIndex] = modifiedItem
-                            
-                        }
+                    //                    else if let orderedFood = foodList.first(where: {$0.name == modifiedString}){
+                    //
+                    //                        let newItemOrder = ItemOrder(id: UUID(), name: orderedFood.name, price: orderedFood.price, qty: 1)
+                    //
+                    //                        if let orderIndex = data.firstIndex(where: { $0.username == rpsSession.username}) {
+                    //                            data[orderIndex].menus.append(newItemOrder)
+                    //                        }
+                    //
+                    //
+                    //                    }
+                    if let indexAda = data.firstIndex(where: {$0.name == modifiedString}){
+                        data[indexAda].qty += 1
                     }
                     else if let orderedFood = foodList.first(where: {$0.name == modifiedString}){
-                        
-                        let newItemOrder = ItemOrder(id: UUID(), name: orderedFood.name, price: orderedFood.price, qty: 1)
-                        
-                        if let orderIndex = data.firstIndex(where: { $0.username == rpsSession.username}) {
-                            data[orderIndex].menus.append(newItemOrder)
-                        }
-                        
-                        
+                        data.append(ItemOrder(id: UUID(), name: orderedFood.name, price: orderedFood.price, qty: 1))
                     }
-                    
-                    //                    if let indexAda = data.firstIndex(where: {$0.menus.filter{$0.name == modifiedString}}){
-                    //                        data[indexAda].qty += 1
-                    //                    }
-                    //                    else if let orderedFood = foodList.first(where: {$0.name == modifiedString}){
-                    //                        data.append(ItemOrder(name: orderedFood.name, price: orderedFood.price, qty: 1))
-                    //                    }
                     for x in data {
-                        let itemString = x.username + " " + x.menus[1].name
+                        let itemString = x.name + " " + String(x.price) + " " + String(x.qty)
                         print(itemString)
                     }
                 }

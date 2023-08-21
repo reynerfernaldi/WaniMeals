@@ -10,7 +10,7 @@ import os
 
 struct PairView: View {
     @EnvironmentObject var rpsSession: RPSMultipeerSession
-    @State var data : [Orders] = []
+    @State var data : [ItemOrder] = []
 
     var logger = Logger()
 

@@ -33,8 +33,6 @@ struct KitchenView: View {
                                 
                                 NotificationCenter.default.post(name: Notification.Name("IsReadyChanged"), object: nil)
                                     
-//                                let orderReady = Orders(menus: [], username: rpsSession.username, isReady: true, id: order.id)
-//                                rpsSession.send(menu: orderReady)
                             }
                         }) {
                             Text("Done")

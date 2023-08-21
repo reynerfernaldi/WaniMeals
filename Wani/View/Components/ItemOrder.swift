@@ -14,8 +14,8 @@ struct ItemOrder: Codable, Hashable {
     var qty: Int
     
     func hash(into hasher: inout Hasher) {
-           hasher.combine(name)
-           hasher.combine(price)
-           hasher.combine(qty)
-       }
+        hasher.combine(name)
+        hasher.combine(price)
+        hasher.combine(qty)
+    }
 }

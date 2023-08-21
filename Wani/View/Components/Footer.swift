@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import os
 
 struct Footer: View {
-    @Binding var data : [Orders]
+    @EnvironmentObject var rpsSession: RPSMultipeerSession
+    @Binding var data : [ItemOrder]
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -17,10 +19,10 @@ struct Footer: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
                 Spacer()
-//                Text(formatPrice(calc()))
-//                    .font(.title3)
-//                    .fontWeight(.semibold)
-//                    .foregroundColor(.black)
+                Text(formatPrice(calc()))
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
             }.padding(.top, 11)
 //            Text("Add more by tapping the top of your iPhone over food picture")
 //                .font(.caption2)
@@ -28,7 +30,9 @@ struct Footer: View {
 //                .padding(.bottom, 11)
 //                .padding(.top, 6)
             Button {
-                
+                print(rpsSession.username)
+                let order = Orders(menus: data, username: rpsSession.username, isReady: false, id: UUID())
+                rpsSession.send(menu: order)
             } label: {
                 ZStack{
                     Rectangle()
@@ -47,9 +51,9 @@ struct Footer: View {
 //        .background(Color("Primary"))
     }
     
-//    func calc() -> Int {
-//            return data.reduce(0) { $0 + ($1.qty * $1.price) }
-//        }
+    func calc() -> Int {
+            return data.reduce(0) { $0 + ($1.qty * $1.price) }
+        }
     func formatPrice(_ amount: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
