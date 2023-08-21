@@ -29,7 +29,7 @@ struct OrderState: View {
                 .toolbar{
                     nfcButton(data: self.$data).frame(width: 50, height: 50)
                 }
-        Footer()
+        Footer(data: $data)
     }
 }
 

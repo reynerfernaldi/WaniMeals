@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Footer: View {
+    @Binding var data : [ItemOrder]
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -16,7 +17,7 @@ struct Footer: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
                 Spacer()
-                Text("Rp42.000")
+                Text(formatPrice(calc()))
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
@@ -45,10 +46,25 @@ struct Footer: View {
         .background(Color("ColorBackground"))
 //        .background(Color("Primary"))
     }
-}
-
-struct Footer_Previews: PreviewProvider {
-    static var previews: some View {
-        Footer()
+    
+    func calc() -> Int {
+            return data.reduce(0) { $0 + ($1.qty * $1.price) }
+        }
+    func formatPrice(_ amount: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.decimalSeparator = ","
+        numberFormatter.minimumFractionDigits = 0
+        numberFormatter.maximumFractionDigits = 0
+        
+        let formattedAmount = numberFormatter.string(from: NSNumber(value: amount)) ?? ""
+        return "Rp" + formattedAmount
     }
 }
+
+//struct Footer_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Footer(data: $data)
+//    }
+//}
