@@ -10,7 +10,7 @@ import os
 
 struct PairView: View {
     @EnvironmentObject var rpsSession: RPSMultipeerSession
-    @State var data : [ItemOrder] = []
+    @State var data : [Orders] = []
 
     var logger = Logger()
 
@@ -36,11 +36,13 @@ struct PairView: View {
                 }
             }
         } else {
-            if (data.isEmpty){
-                EmptyState(data: $data)
-            } else {
-                OrderState(data: $data)
-//                Listnumpang(data: $data)
+            NavigationStack{
+                if (data.isEmpty){
+                    EmptyState(data: $data)
+                } else {
+                    OrderState(data: $data)
+                    //                Listnumpang(data: $data)
+                }
             }
         }
     }

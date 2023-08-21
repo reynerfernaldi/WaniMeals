@@ -7,17 +7,9 @@
 
 import Foundation
 
-struct Menu: Codable {
-    var makanan: String
-    var quantity: Int
-    var id: UUID
-    
-}
-
-struct Orders: Codable {
-    var menus: [Menu]
+struct Orders: Codable, Hashable {
+    var menus: [ItemOrder]
     var username: String
     var isReady: Bool
     var id: UUID
-    
 }

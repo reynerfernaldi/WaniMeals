@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EmptyState: View {
-    @Binding var data : [ItemOrder]
+    @Binding var data : [Orders]
     var body: some View {
         VStack(alignment: .leading) {
             //                CardTap()

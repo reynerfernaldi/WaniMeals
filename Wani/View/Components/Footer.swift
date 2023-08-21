@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Footer: View {
-    @Binding var data : [ItemOrder]
+    @Binding var data : [Orders]
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -17,10 +17,10 @@ struct Footer: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
                 Spacer()
-                Text(formatPrice(calc()))
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.black)
+//                Text(formatPrice(calc()))
+//                    .font(.title3)
+//                    .fontWeight(.semibold)
+//                    .foregroundColor(.black)
             }.padding(.top, 11)
 //            Text("Add more by tapping the top of your iPhone over food picture")
 //                .font(.caption2)
@@ -47,9 +47,9 @@ struct Footer: View {
 //        .background(Color("Primary"))
     }
     
-    func calc() -> Int {
-            return data.reduce(0) { $0 + ($1.qty * $1.price) }
-        }
+//    func calc() -> Int {
+//            return data.reduce(0) { $0 + ($1.qty * $1.price) }
+//        }
     func formatPrice(_ amount: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal

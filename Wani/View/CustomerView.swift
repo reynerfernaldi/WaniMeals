@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CustomerView: View {
     @EnvironmentObject var rpsSession: RPSMultipeerSession
-//    @State private var orderData: [Orders] = []
+//    @State private var orderData: Orders = []
+//    @Binding var data : [ItemOrder]
     @State private var showAlert = false
     var body: some View {
         VStack{
@@ -24,15 +23,16 @@ struct CustomerView: View {
                         Text("Status: \(order.isReady)" as String)
                         
                         ForEach(order.menus, id: \.id) { i in
-                            HStack{
-                                Text("Menu: \(i.makanan)")
-                                Text("Qty: \(i.quantity)")
+//                            HStack{
+//                                Text("Menu: \(i.name)")
+//                                Text("Qty: \(i.qty)")
+//                            }
+                            if let y = foodList.first(where: { $0.name == i.name }) {
+                                CardMenu(food: y, qty: i.qty)
                             }
                         }
                     }
                 }
-                
-                
             }
             .onAppear {
                 print("executed2")
@@ -50,13 +50,14 @@ struct CustomerView: View {
                 )
             }
             
-            Button("Send Menu") {
-                let menu = Orders(menus: [Menu(makanan: "Nasi Goreng", quantity: 2, id: UUID()),
-                                          Menu(makanan: "Nasi Pecel", quantity: 4, id: UUID())], username: rpsSession.username, isReady: false, id: UUID())
-
-//                orderData.append( menu)
-                rpsSession.send(menu: menu)
-            }
+//            Button("Send Menu") {
+////                let menu = Orders(menus: [Menu(makanan: "Nasi Goreng", quantity: 2, id: UUID()),
+////                                          Menu(makanan: "Nasi Pecel", quantity: 4, id: UUID())], username: rpsSession.username, isReady: false, id: UUID())
+//
+////                orderData.append( menu)
+//                let orderData = Orders(menus: [ItemOrder()], username: rpsSession.username, isReady: false, id: UUID())
+//                rpsSession.send(menu: orderData)
+//            }
         }
 
         

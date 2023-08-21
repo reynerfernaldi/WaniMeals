@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct ItemOrder: Hashable {
+struct ItemOrder: Codable, Hashable {
+    var id: UUID
     let name: String
     let price: Int
     var qty: Int

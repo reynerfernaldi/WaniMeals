@@ -21,8 +21,8 @@ struct KitchenView: View {
                             Text("Status: \(order.isReady)" as String)
                             ForEach(order.menus, id: \.id) { i in
                                 HStack{
-                                    Text("Menu: \(i.makanan)")
-                                    Text("Qty: \(i.quantity)")
+                                    Text("Menu: \(i.name)")
+                                    Text("Qty: \(i.qty)")
                                 }
                             }
                         }
