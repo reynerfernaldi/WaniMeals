@@ -10,6 +10,7 @@ import os
 
 struct PairView: View {
     @EnvironmentObject var rpsSession: RPSMultipeerSession
+    @State var data : [ItemOrder] = []
 
     var logger = Logger()
 
@@ -35,7 +36,12 @@ struct PairView: View {
                 }
             }
         } else {
-            CustomerView()
+            if (data.isEmpty){
+                EmptyState(data: $data)
+            } else {
+                OrderState(data: $data)
+//                Listnumpang(data: $data)
+            }
         }
     }
 }

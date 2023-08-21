@@ -24,7 +24,7 @@ struct Listnumpang: View {
         .navigationTitle("Order")
         .navigationBarTitleDisplayMode(.large)
         .toolbar{
-            nfcButton(data: self.$data).frame(width: 50, height: 50)
+//            nfcButton(data: self.$data).frame(width: 50, height: 50)
         }
         Footer(data: $data)
     }

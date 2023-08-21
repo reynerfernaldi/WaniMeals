@@ -31,6 +31,7 @@
 		0B2981552A930EFB00078AEB /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2981532A930E6400078AEB /* PairView.swift */; };
 		0B2981572A93129300078AEB /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2981562A93129300078AEB /* CustomerView.swift */; };
 		0B2981582A93138C00078AEB /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2981562A93129300078AEB /* CustomerView.swift */; };
+		0B2981592A93200400078AEB /* ItemOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A62B132A92FDBE000EC0F3 /* ItemOrder.swift */; };
 		0B2E64B32A83D07F00B4A843 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E64B22A83D07F00B4A843 /* CommonView.swift */; };
 		0B2E64BC2A847C2A00B4A843 /* nfcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E312A8345F600F0CE95 /* nfcButton.swift */; };
 		0BC340712A80A6D30073EB70 /* CardTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC340702A80A6D30073EB70 /* CardTap.swift */; };
@@ -348,6 +349,7 @@
 				0B2981432A92FDAA00078AEB /* MPConnectionManager.swift in Sources */,
 				0B2981502A9301F100078AEB /* KitchenView.swift in Sources */,
 				0B2981322A92FD4600078AEB /* ContentView.swift in Sources */,
+				0B2981592A93200400078AEB /* ItemOrder.swift in Sources */,
 				0B2981452A92FEA900078AEB /* EmptyState.swift in Sources */,
 				0B2981462A92FEAE00078AEB /* nfcButton.swift in Sources */,
 				0B2981302A92FD4600078AEB /* WaniAppClipApp.swift in Sources */,

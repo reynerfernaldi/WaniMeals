@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct ItemOrder: Hashable {
     let name: String
     let price: Int
