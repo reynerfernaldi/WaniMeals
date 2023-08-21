@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct Listnumpang: View {
-    @Binding var data : [String]
+    @Binding var data : [ItemOrder]
     var body: some View {
         VStack {
             List {
                 ForEach(data, id: \.self)
                 {
-                    x in Text(x)
+                    x in Text(x.name)
                 }
             }
             Spacer()
