@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommonView: View {
-    @State var data : [String] = []
+    @State var data : [ItemOrder] = []
     var body: some View {
         NavigationStack
         {
