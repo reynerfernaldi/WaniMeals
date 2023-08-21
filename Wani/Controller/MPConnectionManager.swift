@@ -8,22 +8,6 @@
 import MultipeerConnectivity
 import os
 
-//struct Menu: Codable {
-//    var makanan: String
-//    var quantity: Int
-//    var id: UUID
-//
-//}
-//
-//struct Orders: Codable {
-//    var menus: [Menu]
-//    var username: String
-//    var id: UUID
-//
-//}
-
-
-
 class RPSMultipeerSession: NSObject, ObservableObject {
     
     private let serviceType = "Wani"
@@ -43,6 +27,7 @@ class RPSMultipeerSession: NSObject, ObservableObject {
     @Published var recvdInviteFrom: MCPeerID? = nil
     @Published var paired: Bool = false
     @Published var invitationHandler: ((Bool, MCSession?) -> Void)?
+    @Published var isChange: Bool = false
     
     init(username: String) {
         let peerID = MCPeerID(displayName: username)
@@ -196,17 +181,24 @@ extension RPSMultipeerSession: MCSessionDelegate {
             DispatchQueue.main.async {
                 if let index = self.orders.firstIndex(where: {$0.id == receivedMenu.id}){
                     print("Ketemu! di index ke", index)
+                    self.isChange = true
                     self.orders[index].isReady = true
+                    self.objectWillChange.send()
                 } else {
                     print("Buat Baru!")
-                    self.orders.append(receivedMenu) // Set nilai receivedMenu di dalam session
+                    if self.username == receivedMenu.username{
+                        self.orders.append(receivedMenu) // Set nilai receivedMenu di dalam session
+                    }else if self.username == "Server" {
+                        self.orders.append(receivedMenu)
+                    }
+                    
                 }
                 
                 
 //                self.orders.append(receivedMenu) // Set nilai receivedMenu di dalam session
                 print("Received")
                 print("Ini Isinya MPC, \(self.orders)")
-                self.objectWillChange.send()
+                
             }
             
         } catch {
