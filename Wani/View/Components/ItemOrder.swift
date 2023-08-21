@@ -6,14 +6,16 @@
 //
 
 import Foundation
-struct ItemOrder: Hashable {
+
+struct ItemOrder: Codable, Hashable {
+    var id: UUID
     let name: String
     let price: Int
     var qty: Int
     
     func hash(into hasher: inout Hasher) {
-           hasher.combine(name)
-           hasher.combine(price)
-           hasher.combine(qty)
-       }
+        hasher.combine(name)
+        hasher.combine(price)
+        hasher.combine(qty)
+    }
 }

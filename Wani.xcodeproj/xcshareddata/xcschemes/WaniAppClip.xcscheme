@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0B2E64C12A847D4800B4A843"
+               BlueprintIdentifier = "0B29812C2A92FD4600078AEB"
                BuildableName = "WaniAppClip.app"
                BlueprintName = "WaniAppClip"
                ReferencedContainer = "container:Wani.xcodeproj">
@@ -43,7 +43,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0B2E64C12A847D4800B4A843"
+            BlueprintIdentifier = "0B29812C2A92FD4600078AEB"
             BuildableName = "WaniAppClip.app"
             BlueprintName = "WaniAppClip"
             ReferencedContainer = "container:Wani.xcodeproj">
@@ -60,7 +60,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0B2E64C12A847D4800B4A843"
+            BlueprintIdentifier = "0B29812C2A92FD4600078AEB"
             BuildableName = "WaniAppClip.app"
             BlueprintName = "WaniAppClip"
             ReferencedContainer = "container:Wani.xcodeproj">

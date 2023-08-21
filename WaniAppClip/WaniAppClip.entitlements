@@ -8,7 +8,7 @@
 	</array>
 	<key>com.apple.developer.parent-application-identifiers</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.ada.Wani1</string>
+		<string>$(AppIdentifierPrefix)com.ada.Wani2</string>
 	</array>
 </dict>
 </plist>

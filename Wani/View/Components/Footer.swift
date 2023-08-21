@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import os
 
 struct Footer: View {
+    @EnvironmentObject var rpsSession: RPSMultipeerSession
     @Binding var data : [ItemOrder]
     var body: some View {
         VStack(alignment: .leading){
@@ -28,7 +30,9 @@ struct Footer: View {
 //                .padding(.bottom, 11)
 //                .padding(.top, 6)
             Button {
-                
+                print(rpsSession.username)
+                let order = Orders(menus: data, username: rpsSession.username, isReady: false, id: UUID())
+                rpsSession.send(menu: order)
             } label: {
                 ZStack{
                     Rectangle()
