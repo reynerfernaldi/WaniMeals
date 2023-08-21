@@ -24,7 +24,7 @@ struct CardMenu: View {
                     Text(food.name)
                         .fontWeight(.bold)
                         .padding(.vertical, 1)
-                    Text("Rp" + String(food.price))
+                    Text(formatPrice(food.price))
                         .fontWeight(.regular)
                         .foregroundColor(Color("Secondary"))
                     HStack{
@@ -47,6 +47,17 @@ struct CardMenu: View {
                 }.padding(.vertical, 5)
             }.padding(10)
         }
+    }
+    func formatPrice(_ amount: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.decimalSeparator = ","
+        numberFormatter.minimumFractionDigits = 0
+        numberFormatter.maximumFractionDigits = 0
+        
+        let formattedAmount = numberFormatter.string(from: NSNumber(value: amount)) ?? ""
+        return "Rp" + formattedAmount
     }
 }
 
