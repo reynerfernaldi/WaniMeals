@@ -28,6 +28,7 @@ struct CommonView: View {
         NavigationStack{
             switch currentView {
             case 1:
+                
                 PairView()
                     .environmentObject(rpsSession!)
             case 2:
@@ -103,7 +104,7 @@ struct customViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-//            .background(LinearGradient(gradient: Gradient(colors: [startColor, endColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        //            .background(LinearGradient(gradient: Gradient(colors: [startColor, endColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(roundedCornes)
             .padding(3)
             .foregroundColor(textColor)
