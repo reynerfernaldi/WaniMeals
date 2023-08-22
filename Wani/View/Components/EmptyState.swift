@@ -33,7 +33,7 @@ struct EmptyState: View {
                 }
                 
                 Spacer()
-//                NFCButton(data: self.$data).frame(width: 200, height: 50)
+                //                NFCButton(data: self.$data).frame(width: 200, height: 50)
             }
             Spacer()
         }
