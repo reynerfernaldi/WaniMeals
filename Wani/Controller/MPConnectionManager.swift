@@ -186,6 +186,7 @@ extension RPSMultipeerSession: MCSessionDelegate {
                     self.objectWillChange.send()
                 } else {
                     print("Buat Baru!")
+                    self.isChange = true
                     if self.username == receivedMenu.username{
                         self.orders.append(receivedMenu) // Set nilai receivedMenu di dalam session
                     }else if self.username == "Server" {

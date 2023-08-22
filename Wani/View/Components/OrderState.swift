@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreNFC
+import UserNotifications
 
 struct OrderState: View {
     @EnvironmentObject var rpsSession: RPSMultipeerSession
@@ -22,13 +23,21 @@ struct OrderState: View {
             }
             Spacer()
         }
-        .alert(isPresented: $rpsSession.isChange) {
-            Alert(
-                title: Text("Order Status Changed"),
-                message: Text("The order status has changed to ready."),
-                dismissButton: .default(Text("OK"))
-            )
+        //        .alert(isPresented: $rpsSession.isChange) {
+        //            Alert(
+        //                title: Text("Order Status Changed"),
+        //                message: Text("The order status has changed to ready."),
+        //                dismissButton: .default(Text("OK"))
+        //            )
+        //        }
+        
+        .onChange(of: rpsSession.isChange) { newValue in
+            if newValue {
+                print("hvbfewjnd \(rpsSession.orders)")
+                scheduleNotification(title: "tess", subtitle: "wod", secondsLater: 2, isRepeating: false)
+            }
         }
+
         .padding(.horizontal, 20)
         .background(Color("ColorBackground"))
         .navigationTitle("Order")
@@ -39,6 +48,29 @@ struct OrderState: View {
         Footer(data: $data)
     }
     
+    func scheduleNotification(title: String, subtitle: String, secondsLater: TimeInterval, isRepeating: Bool) {
+        //Request Access
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
+            if let error {
+                print("Notification access not granted.", error.localizedDescription)
+            }
+        }
+        //Define the content
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.subtitle = subtitle
+        content.sound = .default
+        
+        //Define the trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: secondsLater, repeats: isRepeating)
+        
+        //Define the request
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        //Add request to notication center of the current app
+        UNUserNotificationCenter.current().add(request)
+    }
+
 }
 
 //struct OrderState_Previews: PreviewProvider {
