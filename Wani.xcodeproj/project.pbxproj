@@ -42,6 +42,8 @@
 		0BCAB33D2A944F63008917B2 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB33B2A944E8B008917B2 /* HapticManager.swift */; };
 		0BCAB33F2A945C58008917B2 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB33E2A945C58008917B2 /* CompletedView.swift */; };
 		0BCAB3402A945D90008917B2 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB33E2A945C58008917B2 /* CompletedView.swift */; };
+		0BCAB3442A948AD4008917B2 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB3432A948AD4008917B2 /* ProgressView.swift */; };
+		0BCAB3452A9490C3008917B2 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB3432A948AD4008917B2 /* ProgressView.swift */; };
 		612F4BB02A808A980025E5A0 /* KitchenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F4BAF2A808A980025E5A0 /* KitchenView.swift */; };
 		612F4BB42A808B140025E5A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F4BB32A808B140025E5A0 /* LoginView.swift */; };
 		6137399A2A78C321006991EB /* WaniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613739992A78C321006991EB /* WaniApp.swift */; };
@@ -99,6 +101,7 @@
 		0BC340762A814BC90073EB70 /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		0BCAB33B2A944E8B008917B2 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		0BCAB33E2A945C58008917B2 /* CompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedView.swift; sourceTree = "<group>"; };
+		0BCAB3432A948AD4008917B2 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		612F4BAF2A808A980025E5A0 /* KitchenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenView.swift; sourceTree = "<group>"; };
 		612F4BB32A808B140025E5A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		613739962A78C320006991EB /* Wani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,7 @@
 				0B2981532A930E6400078AEB /* PairView.swift */,
 				0B2981562A93129300078AEB /* CustomerView.swift */,
 				0BCAB33E2A945C58008917B2 /* CompletedView.swift */,
+				0BCAB3432A948AD4008917B2 /* ProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +361,7 @@
 				0B2981472A92FEB200078AEB /* OrderState.swift in Sources */,
 				0B2981432A92FDAA00078AEB /* MPConnectionManager.swift in Sources */,
 				0BCAB3402A945D90008917B2 /* CompletedView.swift in Sources */,
+				0BCAB3452A9490C3008917B2 /* ProgressView.swift in Sources */,
 				0B2981502A9301F100078AEB /* KitchenView.swift in Sources */,
 				0B2981322A92FD4600078AEB /* ContentView.swift in Sources */,
 				0B2981592A93200400078AEB /* ItemOrder.swift in Sources */,
@@ -394,6 +399,7 @@
 				0B29814F2A93019300078AEB /* DataModel.swift in Sources */,
 				0BC340752A814B0F0073EB70 /* OrderState.swift in Sources */,
 				6137399A2A78C321006991EB /* WaniApp.swift in Sources */,
+				0BCAB3442A948AD4008917B2 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

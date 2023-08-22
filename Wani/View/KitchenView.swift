@@ -11,18 +11,20 @@ import os
 struct KitchenView: View {
 //    @State var orderData: [Orders] = []
     @EnvironmentObject var rpsSession: RPSMultipeerSession
+    @State private var isButtonClicked = false
     var body: some View {
         VStack{
             List{
                 ForEach(rpsSession.orders, id: \.id) { order in
-                    HStack{
+                    VStack{
                         VStack(alignment: .leading){
-                            Text("ID: \(order.username)")
-                            Text("Status: \(order.isReady)" as String)
                             ForEach(order.menus, id: \.id) { i in
-                                HStack{
-                                    Text("Menu: \(i.name)")
-                                    Text("Qty: \(i.qty)")
+//                                HStack{
+//                                    Text("Menu: \(i.name)")
+//                                    Text("Qty: \(i.qty)")
+//                                }
+                                if let y = foodList.first(where: { $0.name == i.name }) {
+                                    CardMenu(food: y, qty: i.qty)
                                 }
                             }
                         }
@@ -30,17 +32,25 @@ struct KitchenView: View {
                             if let index = rpsSession.orders.firstIndex(where: { $0.id == order.id }) {
                                 rpsSession.orders[index].isReady = true
                                 rpsSession.send(menu: rpsSession.orders[index])
-                                
-                                NotificationCenter.default.post(name: Notification.Name("IsReadyChanged"), object: nil)
-                                    
+//                                isButtonClicked.toggle()
+//                                NotificationCenter.default.post(name: Notification.Name("IsReadyChanged"), object: nil)
+
                             }
                         }) {
-                            Text("Done")
+                            ZStack {
+                                Rectangle()
+                                  .foregroundColor(.clear)
+                                  .frame(width: 358, height: 46)
+                                  .background(Color("Primary"))
+                                  .cornerRadius(10)
+                                Text("DONE")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.white))
+                            }
+                            .frame(width: 358, height: 46)
                         }
                     }
                 }
-                
-                
             }
 //            .onReceive(rpsSession.$orders) { receivedMenus in
 //                orderData.removeAll()
@@ -48,6 +58,8 @@ struct KitchenView: View {
 //                print("Ini isi order data", orderData)
 //            }
         }
+        .navigationTitle("Kitchen")
+        .navigationBarTitleDisplayMode(.large)
         .alert("Received an invite from \(rpsSession.recvdInviteFrom?.displayName ?? "ERR")!", isPresented: $rpsSession.recvdInvite) {
             Button("Accept invite") {
                 if (rpsSession.invitationHandler != nil) {
