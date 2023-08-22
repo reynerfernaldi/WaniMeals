@@ -80,6 +80,7 @@ class RPSMultipeerSession: NSObject, ObservableObject {
         if !session.connectedPeers.isEmpty {
             log.info("sendMove: \(String(describing: menu)) to \(self.session.connectedPeers[0].displayName)")
             do {
+                self.isChange = false
                 var menuWithUsername = menu // Salin objek menu
                 menuWithUsername.username = self.username
                 let menuData = try JSONEncoder().encode(menu)
