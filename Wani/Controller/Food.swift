@@ -18,6 +18,7 @@ var foodList: [Food] = [
     Food(name: "Bakso", price: 10000, picture: "x.png"),
     Food(name: "Nasi Ayam Geprek", price: 12000, picture: "x.png"),
     Food(name: "Nasi Udang Geprek", price: 15000, picture: "x.png"),
+    Food(name: "Nasi Ayam Kremes", price: 15000, picture: "x.png"),
     Food(name: "Indomie", price: 6000, picture: "x.png")
 ]
 
