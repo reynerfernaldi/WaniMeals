@@ -17,28 +17,27 @@ struct CompletedView: View {
                 VStack{
                     VStack(alignment: .leading){
                         ForEach(order.menus, id: \.id) { i in
-                            //                                HStack{
-                            //                                    Text("Menu: \(i.name)")
-                            //                                    Text("Qty: \(i.qty)")
-                            //                                }
-                            if let y = foodList.first(where: { $0.name == i.name }) {
-                                CardMenu(food: y, qty: i.qty)
+                            VStack{
+                                Image("Logo")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Text("\(i.name)")
+                                Text("\(i.price)")
+                                Text("Ambil Pesanan Anda")
                             }
                         }
                     }
                 }
             }
-            
-            Text("PESANAN KELAR")
         }
-            .onAppear{
-                print("appp")
-                if rpsSession.isChange == true {
-                    print("hapticcc")
-                    hapticManager?.prepareHaptics()
-                    hapticManager?.doneSuccess()
-                }
+        .onAppear{
+            print("appp")
+            if rpsSession.isChange == true {
+                print("hapticcc")
+                hapticManager?.prepareHaptics()
+                hapticManager?.doneSuccess()
             }
+        }
     }
 }
 

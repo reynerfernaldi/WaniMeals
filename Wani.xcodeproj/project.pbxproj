@@ -44,6 +44,8 @@
 		0BCAB3402A945D90008917B2 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB33E2A945C58008917B2 /* CompletedView.swift */; };
 		0BCAB3442A948AD4008917B2 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB3432A948AD4008917B2 /* ProgressView.swift */; };
 		0BCAB3452A9490C3008917B2 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB3432A948AD4008917B2 /* ProgressView.swift */; };
+		0BCAB3472A959709008917B2 /* CardProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB3462A959709008917B2 /* CardProgress.swift */; };
+		0BCAB3482A959709008917B2 /* CardProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCAB3462A959709008917B2 /* CardProgress.swift */; };
 		612F4BB02A808A980025E5A0 /* KitchenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F4BAF2A808A980025E5A0 /* KitchenView.swift */; };
 		612F4BB42A808B140025E5A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F4BB32A808B140025E5A0 /* LoginView.swift */; };
 		6137399A2A78C321006991EB /* WaniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613739992A78C321006991EB /* WaniApp.swift */; };
@@ -102,6 +104,7 @@
 		0BCAB33B2A944E8B008917B2 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		0BCAB33E2A945C58008917B2 /* CompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedView.swift; sourceTree = "<group>"; };
 		0BCAB3432A948AD4008917B2 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		0BCAB3462A959709008917B2 /* CardProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardProgress.swift; sourceTree = "<group>"; };
 		612F4BAF2A808A980025E5A0 /* KitchenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenView.swift; sourceTree = "<group>"; };
 		612F4BB32A808B140025E5A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		613739962A78C320006991EB /* Wani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wani.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +247,7 @@
 				E2A62B132A92FDBE000EC0F3 /* ItemOrder.swift */,
 				0BC340762A814BC90073EB70 /* Footer.swift */,
 				E2CC6E332A83477700F0CE95 /* Listnumpang.swift */,
+				0BCAB3462A959709008917B2 /* CardProgress.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -350,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCAB3482A959709008917B2 /* CardProgress.swift in Sources */,
 				0B29814B2A92FEE800078AEB /* CardMenu.swift in Sources */,
 				0B29814A2A92FEC000078AEB /* Food.swift in Sources */,
 				0B2981582A93138C00078AEB /* CustomerView.swift in Sources */,
@@ -382,6 +387,7 @@
 				0BC340732A80A7340073EB70 /* CardMenu.swift in Sources */,
 				0BCAB33F2A945C58008917B2 /* CompletedView.swift in Sources */,
 				E2E65E3D2A80870700ACFFC4 /* EmptyState.swift in Sources */,
+				0BCAB3472A959709008917B2 /* CardProgress.swift in Sources */,
 				612F4BB02A808A980025E5A0 /* KitchenView.swift in Sources */,
 				61BF6E2B2A809ADD00F88013 /* KitchenModel.swift in Sources */,
 				E2A62B142A92FDBE000EC0F3 /* ItemOrder.swift in Sources */,
