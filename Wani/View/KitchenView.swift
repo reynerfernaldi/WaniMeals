@@ -15,17 +15,14 @@ struct KitchenView: View {
     var body: some View {
         VStack{
             List{
-                ForEach(rpsSession.orders, id: \.id) { order in
+                ForEach($rpsSession.orders, id: \.id) { $order in
                     VStack{
                         VStack(alignment: .leading){
-                            ForEach(order.menus, id: \.id) { i in
-//                                HStack{
-//                                    Text("Menu: \(i.name)")
-//                                    Text("Qty: \(i.qty)")
+                            ForEach($order.menus, id: \.id) { i in
+//                                if let y = foodList.first(where: { $0.name == i.name }) {
+//                                    CardMenu(item: <#T##ItemOrder#>)
 //                                }
-                                if let y = foodList.first(where: { $0.name == i.name }) {
-                                    CardMenu(food: y, qty: i.qty)
-                                }
+                                CardMenu(item: i)
                             }
                         }
                         Button(action: {

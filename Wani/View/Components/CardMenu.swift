@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CardMenu: View {
-    let food: Food
-    let qty: Int
+    @Binding var item : ItemOrder
+//    let food: Food
+//    let qty: Int
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
@@ -21,21 +22,25 @@ struct CardMenu: View {
                     .resizable()
                     .frame(width: 90, height: 90)
                 VStack(alignment: .leading){
-                    Text(food.name)
+                    Text(item.name)
                         .fontWeight(.bold)
                         .padding(.vertical, 1)
-                    Text(formatPrice(food.price))
+                    Text(formatPrice(item.price))
                         .fontWeight(.regular)
                         .foregroundColor(Color("Secondary"))
                     HStack{
-                        Text("Quantity : " + String(qty))
+                        Text("Quantity : " + String(item.qty))
                             .font(.body)
                             .fontWeight(.regular)
                             .padding(.vertical, 10)
                         Spacer()
                         HStack(alignment: .center, spacing: 14.5) {
-                            Image(systemName: "minus")
-                            Image(systemName: "plus")
+                            Image(systemName: "minus").onTapGesture {
+                                item.qty -= 1
+                            }
+                            Image(systemName: "plus").onTapGesture {
+                                item.qty += 1
+                            }
                         }
                         .padding(.leading, 15)
                         .padding(.trailing, 15)

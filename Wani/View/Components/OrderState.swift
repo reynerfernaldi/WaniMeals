@@ -21,10 +21,10 @@ struct OrderState: View {
         else {
             VStack(alignment: .leading) {
                 VStack{
-                    ForEach(data, id: \.self) { x in
-                        if let y = foodList.first(where: { $0.name == x.name }) {
-                            CardMenu(food: y, qty: x.qty)
-                        }
+                    ForEach($data, id: \.self) { x in
+//                        if let y = foodList.first(where: { $0.name == x.name }) {
+                            CardMenu(item: x)
+                        
                     }
                 }
                 Spacer()
