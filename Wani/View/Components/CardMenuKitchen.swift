@@ -33,7 +33,7 @@ struct CardMenuKitchen: View {
                         Spacer()
                     }
                 }.padding(.vertical, 5)
-            }.padding(10)
+            }
         }
     }
     func formatPrice(_ amount: Int) -> String {

@@ -66,13 +66,7 @@ struct OrderState: View {
                     print(rpsSession.username)
                     view = 1
                     
-//                    ForEach(data, id: \.self) { x in
-//                        let menu = ItemOrder(id: UUID(), name: x.name, price: x.<#T##Int#>, qty: <#T##Int#>)
-//                        let order = Orders(menus: , username: rpsSession.username, isReady: false, id: UUID())
-//                        rpsSession.send(menu: order)
-//
-//                    }
-//                    ForEach(data, id: \.id) { x in
+
                         let order = Orders(menus: data, username: rpsSession.username, isReady: false, id: UUID())
                         
                         rpsSession.send(menu: order)
