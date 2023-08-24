@@ -15,11 +15,11 @@ struct Food : Identifiable {
 }
 
 var foodList: [Food] = [
-    Food(name: "Nasi Sop Iga", price: 10000, picture: "AyamGeprek"),
-    Food(name: "Cah Kangkung", price: 12000, picture: "AyamGeprek"),
-    Food(name: "Nasi Lele Penyet", price: 15000, picture: "AyamGeprek"),
-    Food(name: "Nasi Ayam Kremes", price: 15000, picture: "AyamGeprek"),
-    Food(name: "Nasi Ayam Bakar", price: 6000, picture: "AyamGeprek")
+    Food(name: "Nasi Sop Iga", price: 20000, picture: "NasiSopIga"),
+    Food(name: "Cah Kangkung", price: 8000, picture: "CahKangkung"),
+    Food(name: "Nasi Lele Penyet", price: 12000, picture: "NasiLelePenyet"),
+    Food(name: "Nasi Ayam Kremes", price: 15000, picture: "NasiAyamKremes"),
+    Food(name: "Nasi Ayam Bakar", price: 15000, picture: "NasiAyamBakar")
 ]
 
 
