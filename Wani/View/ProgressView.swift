@@ -36,6 +36,8 @@ struct ProgressView: View {
             }
             .padding(.horizontal, 20)
             .background(Color("ColorBackground"))
+            .navigationTitle("Your Order")
+            .navigationBarTitleDisplayMode(.large)
             
         }
     }
