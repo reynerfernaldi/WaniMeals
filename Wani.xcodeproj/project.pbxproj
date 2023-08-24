@@ -32,6 +32,7 @@
 		E2A62B142A92FDBE000EC0F3 /* ItemOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A62B132A92FDBE000EC0F3 /* ItemOrder.swift */; };
 		E2CC6E342A83477700F0CE95 /* Listnumpang.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E332A83477700F0CE95 /* Listnumpang.swift */; };
 		E2CC6E362A84984200F0CE95 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC6E352A84984200F0CE95 /* Food.swift */; };
+		E2E3F8952A97473500E2BC8E /* CardMenuKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E3F8942A97473500E2BC8E /* CardMenuKitchen.swift */; };
 		E2E65E3D2A80870700ACFFC4 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E65E3C2A80870700ACFFC4 /* EmptyState.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		E2CC6E312A8345F600F0CE95 /* nfcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nfcButton.swift; sourceTree = "<group>"; };
 		E2CC6E332A83477700F0CE95 /* Listnumpang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listnumpang.swift; sourceTree = "<group>"; };
 		E2CC6E352A84984200F0CE95 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		E2E3F8942A97473500E2BC8E /* CardMenuKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenuKitchen.swift; sourceTree = "<group>"; };
 		E2E65E3C2A80870700ACFFC4 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 				E2E65E3C2A80870700ACFFC4 /* EmptyState.swift */,
 				0BC340702A80A6D30073EB70 /* CardTap.swift */,
 				0BC340722A80A7340073EB70 /* CardMenu.swift */,
+				E2E3F8942A97473500E2BC8E /* CardMenuKitchen.swift */,
 				E2CC6E312A8345F600F0CE95 /* nfcButton.swift */,
 				0BC340742A814B0F0073EB70 /* OrderState.swift */,
 				E2A62B132A92FDBE000EC0F3 /* ItemOrder.swift */,
@@ -303,6 +306,7 @@
 				0B2981572A93129300078AEB /* CustomerView.swift in Sources */,
 				0B29814F2A93019300078AEB /* DataModel.swift in Sources */,
 				0BC340752A814B0F0073EB70 /* OrderState.swift in Sources */,
+				E2E3F8952A97473500E2BC8E /* CardMenuKitchen.swift in Sources */,
 				6137399A2A78C321006991EB /* WaniApp.swift in Sources */,
 				0BCAB3442A948AD4008917B2 /* ProgressView.swift in Sources */,
 			);
@@ -436,7 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wani/Preview Content\"";
-				DEVELOPMENT_TEAM = 3Q7J3887JY;
+				DEVELOPMENT_TEAM = ANADP4HKAJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wani/Info.plist;
@@ -451,7 +455,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada.wanii;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vania.Wani2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG APPCLIP";
@@ -472,7 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wani/Preview Content\"";
-				DEVELOPMENT_TEAM = 3Q7J3887JY;
+				DEVELOPMENT_TEAM = ANADP4HKAJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wani/Info.plist;
@@ -487,7 +491,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada.wanii;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vania.Wani2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APPCLIP;

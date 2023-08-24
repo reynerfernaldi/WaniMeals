@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardMenu: View {
+struct CardMenuKitchen: View {
     @Binding var item : ItemOrder
     let food: Food
 //    let qty: Int
@@ -25,29 +25,12 @@ struct CardMenu: View {
                     Text(item.name)
                         .fontWeight(.bold)
                         .padding(.vertical, 1)
-                    Text(formatPrice(item.price))
-                        .fontWeight(.regular)
-                        .foregroundColor(Color("Secondary"))
                     HStack{
                         Text("Quantity : " + String(item.qty))
                             .font(.body)
                             .fontWeight(.regular)
                             .padding(.vertical, 10)
                         Spacer()
-                        HStack(alignment: .center, spacing: 14.5) {
-                            Image(systemName: "minus").onTapGesture {
-                                item.qty -= 1
-                            }
-                            Image(systemName: "plus").onTapGesture {
-                                item.qty += 1
-                            }
-                        }
-                        .padding(.leading, 15)
-                        .padding(.trailing, 15)
-                        .padding(.vertical, 5)
-                        .frame(width: 94, height: 32, alignment: .center)
-                        .background(Color(red: 0.46, green: 0.46, blue: 0.5).opacity(0.12))
-                        .cornerRadius(8)
                     }
                 }.padding(.vertical, 5)
             }.padding(10)
