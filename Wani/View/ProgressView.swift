@@ -31,7 +31,7 @@ struct ProgressView: View {
                 print("masuk1 \(rpsSession.isChange)")
                 if newValue == true {
                     view = 1
-                    scheduleNotification(title: "Wani Meals", subtitle: "Your Food is Done", secondsLater: 2, isRepeating: false)
+                    scheduleNotification(title: "Wani Meals", subtitle: "Your Food is Ready", secondsLater: 2, isRepeating: false)
                 }
             }
             .padding(.horizontal, 20)
