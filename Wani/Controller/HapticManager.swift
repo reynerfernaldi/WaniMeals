@@ -56,4 +56,18 @@ class HapticManager {
             print("Failed to play pattern \(error.localizedDescription)")
         }
     }
+    
+    func stopHaptics() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else {
+            return
+        }
+
+        do {
+            hapticEngine = try CHHapticEngine()
+            try hapticEngine.stop()
+            print("stopped")
+        } catch {
+            print("there was an error creating the engine: \(error.localizedDescription)")
+        }
+    }
 }
