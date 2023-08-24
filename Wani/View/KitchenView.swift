@@ -9,7 +9,6 @@ import SwiftUI
 import os
 
 struct KitchenView: View {
-//    @State var orderData: [Orders] = []
     @EnvironmentObject var rpsSession: RPSMultipeerSession
     @State private var isButtonClicked = false
     var body: some View {
@@ -17,55 +16,48 @@ struct KitchenView: View {
             List{
                 ForEach($rpsSession.orders, id: \.id) { $order in
                     VStack{
+                        HStack
+                        {
+                            let y = order.username
+                            Text("Customer : " + "\(y)")
+                                .fontWeight(.bold)
+                                .padding(.vertical, 1)
+                            Spacer()
+                        }
                         VStack(alignment: .leading){
-//                            ForEach($order.menus, id: \.id) { i in
-//                                let y = foodList.first(where: { $0.name == i.name })
-//                                CardMenu(item: i, food: y)
-//                            }
                             ForEach(order.menus.indices, id: \.self) { menuIndex in
                                 let i = order.menus[menuIndex]
                                 let y = foodList.first(where: { $0.name == i.name })
-//                                CardMenu(item: i, food: y!)
                                 if let index = rpsSession.orders.firstIndex(where: { $0.id == order.id }) {
                                     let menuItemBinding = $rpsSession.orders[index].menus[menuIndex]
                                     CardMenuKitchen(item: menuItemBinding, food: y!)
                                 }
                             }
-//                            ForEach(data.indices, id: \.self) { index in
-//                            let xBinding = $data[index]
-//                            let y = foodList.first(where: { $0.name == xBinding.wrappedValue.name })
-//                            CardMenu(item: xBinding, food: y!)
-//                            }
+
                         }
                         Button(action: {
                             if let index = rpsSession.orders.firstIndex(where: { $0.id == order.id }) {
                                 rpsSession.orders[index].isReady = true
                                 rpsSession.send(menu: rpsSession.orders[index])
-//                                isButtonClicked.toggle()
-//                                NotificationCenter.default.post(name: Notification.Name("IsReadyChanged"), object: nil)
 
                             }
                         }) {
                             ZStack {
                                 Rectangle()
                                   .foregroundColor(.clear)
-                                  .frame(width: 358, height: 46)
+                                  .frame(width: 310, height: 46)
                                   .background(Color("Primary"))
                                   .cornerRadius(10)
                                 Text("DONE")
                                     .fontWeight(.bold)
                                     .foregroundColor(Color(.white))
                             }
-                            .frame(width: 358, height: 46)
+                            .frame(width: 310, height: 46)
                         }
                     }
                 }
             }
-//            .onReceive(rpsSession.$orders) { receivedMenus in
-//                orderData.removeAll()
-//                orderData.append(contentsOf: receivedMenus) // Tambahkan menu yang diterima ke daftar yang dipesan
-//                print("Ini isi order data", orderData)
-//            }
+
         }
         .navigationTitle("Kitchen")
         .navigationBarTitleDisplayMode(.large)

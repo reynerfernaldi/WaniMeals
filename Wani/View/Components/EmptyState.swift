@@ -25,7 +25,7 @@ struct EmptyState: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(10)
-                    Text("Place iPhone over food picture\nto add items.")
+                    Text("Click Add button to start adding food")
                         .font(.body)
                         .foregroundColor(Color("Secondary"))
                         .multilineTextAlignment(.center)
