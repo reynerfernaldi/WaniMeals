@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
 
 struct CardProgress: View {
     let food: Food
@@ -19,21 +18,23 @@ struct CardProgress: View {
                 .frame(width: .infinity, height: 120)
             
             HStack{
-                Image("AyamGeprek")
+                Image(food.picture)
                     .resizable()
                     .frame(width: 90, height: 90)
                 VStack(alignment: .leading){
                     Text(food.name)
                         .fontWeight(.bold)
                         .padding(.vertical, 1)
-                    Text(formatPrice(food.price))
-                        .fontWeight(.regular)
-                        .foregroundColor(Color("Secondary"))
+                    HStack{
+                        Text("Qty : " + "\(qty)")
+                            .fontWeight(.regular)
+                            .foregroundColor(Color("Secondary"))
+                    }
+                    Text("On Progress")
+                        .foregroundColor(.red)
+
                 }.padding(.vertical, 5)
-                Text("On Progress")
-                    .foregroundColor(.red)
-                    .offset(y: -35)
-                    .padding(.leading, 35)
+                Spacer()
             }.padding(10)
         }
     }
@@ -47,5 +48,12 @@ struct CardProgress: View {
         
         let formattedAmount = numberFormatter.string(from: NSNumber(value: amount)) ?? ""
         return "Rp" + formattedAmount
+    }
+}
+
+
+struct CardProgress_Previews: PreviewProvider {
+    static var previews: some View {
+        CardProgress(food: Food(name: "Nasi Sop Iga", price: 20, picture: "NasiSopIga"), qty: 2)
     }
 }
