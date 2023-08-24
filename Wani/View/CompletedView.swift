@@ -7,9 +7,15 @@
 
 import SwiftUI
 import CoreHaptics
+import AVKit
+import AVFoundation
 
 struct CompletedView: View {
+    
     @EnvironmentObject var rpsSession: RPSMultipeerSession
+    @State private var videoURL = Bundle.main.url(forResource: "check", withExtension: "mp4")!
+    @State private var avPlayer: AVPlayer?
+    
     var hapticManager = HapticManager()
     var body: some View {
         VStack{
@@ -17,27 +23,56 @@ struct CompletedView: View {
                 VStack{
                     VStack(alignment: .leading){
                         ForEach(order.menus, id: \.id) { i in
-                            VStack{
-                                Image("Logo")
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                Text("\(i.name)")
-                                Text("\(i.price)")
-                                Text("Take Your Food")
+                            VStack {
+                                
+                                if let player = avPlayer {
+                                    AVPlayerViewControllerRepresented(avPlayer: player)
+                                        .onAppear {
+                                            player.play()
+                                        }
+                                        .frame(height: 197)
+                                        .frame(width: 350)
+                                }
+                                
+                                Text("Your Food is Ready!")
+                                    .font(.title)
+                                    .padding(.top, 20)
+                            }
+                            .onAppear {
+                                avPlayer = AVPlayer(url: videoURL)
+                                avPlayer?.play()
                             }
                         }
                     }
                 }
             }
-        }
-        .onAppear{
-            print("appp")
-            if rpsSession.isChange == true {
-                print("hapticcc")
-                hapticManager?.prepareHaptics()
-                hapticManager?.doneSuccess()
+            .onAppear{
+                print("appp")
+                if rpsSession.isChange == true {
+                    print("hapticcc")
+                    hapticManager?.prepareHaptics()
+                    hapticManager?.doneSuccess()
+                }
             }
         }
+    }
+}
+
+struct AVPlayerViewControllerRepresented: UIViewControllerRepresentable {
+    let avPlayer: AVPlayer
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<AVPlayerViewControllerRepresented>) -> AVPlayerViewController {
+        let controller = AVPlayerViewController()
+        controller.player = avPlayer
+        
+        // Menghilangkan kontrol
+        controller.showsPlaybackControls = false
+        
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: UIViewControllerRepresentableContext<AVPlayerViewControllerRepresented>) {
+        // Do nothing
     }
 }
 
@@ -46,3 +81,4 @@ struct CompletedView: View {
 //        CompletedView()
 //    }
 //}
+
