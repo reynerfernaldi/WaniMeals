@@ -18,12 +18,24 @@ struct KitchenView: View {
                 ForEach($rpsSession.orders, id: \.id) { $order in
                     VStack{
                         VStack(alignment: .leading){
-                            ForEach($order.menus, id: \.id) { i in
-//                                if let y = foodList.first(where: { $0.name == i.name }) {
-//                                    CardMenu(item: <#T##ItemOrder#>)
-//                                }
-                                CardMenu(item: i)
+//                            ForEach($order.menus, id: \.id) { i in
+//                                let y = foodList.first(where: { $0.name == i.name })
+//                                CardMenu(item: i, food: y)
+//                            }
+                            ForEach(order.menus.indices, id: \.self) { menuIndex in
+                                let i = order.menus[menuIndex]
+                                let y = foodList.first(where: { $0.name == i.name })
+//                                CardMenu(item: i, food: y!)
+                                if let index = rpsSession.orders.firstIndex(where: { $0.id == order.id }) {
+                                    let menuItemBinding = $rpsSession.orders[index].menus[menuIndex]
+                                    CardMenuKitchen(item: menuItemBinding, food: y!)
+                                }
                             }
+//                            ForEach(data.indices, id: \.self) { index in
+//                            let xBinding = $data[index]
+//                            let y = foodList.first(where: { $0.name == xBinding.wrappedValue.name })
+//                            CardMenu(item: xBinding, food: y!)
+//                            }
                         }
                         Button(action: {
                             if let index = rpsSession.orders.firstIndex(where: { $0.id == order.id }) {
