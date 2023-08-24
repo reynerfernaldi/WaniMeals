@@ -23,7 +23,7 @@ struct CompletedView: View {
                                     .frame(width: 50, height: 50)
                                 Text("\(i.name)")
                                 Text("\(i.price)")
-                                Text("Ambil Pesanan Anda")
+                                Text("Take Your Food")
                             }
                         }
                     }
