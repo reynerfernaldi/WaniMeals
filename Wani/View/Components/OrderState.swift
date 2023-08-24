@@ -20,19 +20,22 @@ struct OrderState: View {
         }
         else {
             VStack(alignment: .leading) {
-                VStack{
-//                    ForEach(data, id: \.self) { x in
-//                        let y = foodList.first(where: { $0.name == x.name })
-//                        CardMenu(item: x, food: y)
-//
-//                    }
-                    ForEach(data.indices, id: \.self) { index in
-                    let xBinding = $data[index]
-                    let y = foodList.first(where: { $0.name == xBinding.wrappedValue.name })
-                    CardMenu(item: xBinding, food: y!)
+                ScrollView {
+                    VStack{
+                        //                    ForEach(data, id: \.self) { x in
+                        //                        let y = foodList.first(where: { $0.name == x.name })
+                        //                        CardMenu(item: x, food: y)
+                        //
+                        //                    }
+                        ForEach(data.indices, id: \.self) { index in
+                            let xBinding = $data[index]
+                            let y = foodList.first(where: { $0.name == xBinding.wrappedValue.name })
+                            CardMenu(item: xBinding, food: y!)
+                        }
                     }
                 }
-                Spacer()
+                    Spacer()
+                
             }
             .padding(.horizontal, 20)
             .background(Color("ColorBackground"))
